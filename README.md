@@ -1,2 +1,2 @@
-№ Leet code every day 
+# Leet code every day 
 
