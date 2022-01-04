@@ -5,8 +5,8 @@
 var myAtoi = function(s) {
      //32bit bound
      let bound32bit = 2**31
-     // allowed symbols
-     let allowed = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]; 
+     // allowed symbols (Set for O(1) complexity)
+     let allowed = new Set(["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]); 
      // increment
      let i = 0
      // result
@@ -24,7 +24,7 @@ var myAtoi = function(s) {
      }   
      
      // build result while its numbers 
-     while(allowed.includes(s[i])) {
+     while(allowed.has(s[i])) {
          result += s[i]
          i++
      }
